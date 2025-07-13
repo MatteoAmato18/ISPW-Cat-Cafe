@@ -34,7 +34,7 @@ public class BookingControllerAlternative {
 
     public VBox getRoot() { return view.getRoot(); }
 
-    /* ------------------ EVENTI ------------------ */
+   
     private void addEventHandlers() {
         view.getConfirmButton().setOnAction(_ -> handleConfirm());
         view.getCancelButton() .setOnAction(_ -> nav.navigateToHomePage(nav, typeOfLogin));

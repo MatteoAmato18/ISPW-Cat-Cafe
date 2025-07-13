@@ -17,13 +17,13 @@ public class BookingService {
     private final GenericDao<Booking>bookingDao  =
              DaoFactory.getInstance().getBookingDao();
 
-    /* ----------------------------- API principale ----------------------------- */
+    
     /**
      * @return "success" | "error:validation" | "error:duplicate" | "error:db"
      */
     public String book(BookingBean bean) {
 
-        /* ---- 1. Validazione completa) ---- */
+        
         if (bean.getTitle() == null || bean.getTitle().isBlank()
             || bean.getDate()  == null || bean.getTime() == null
             || bean.getSeats() <= 0 || bean.getSeats() > 50
@@ -35,7 +35,6 @@ public class BookingService {
 
         
 
-        /* ---- 2. Mapping Bean → Entity ---- */
         Booking b = new Booking();
         b.setTitle            (bean.getTitle());
         b.setDate             (bean.getDate());
@@ -44,9 +43,9 @@ public class BookingService {
         b.setConfirmationEmail(bean.getConfirmationEmail());
         b.setFreeActivities   (bean.getFreeActivities());
 
-        /* ---- 3. Persistenza + mail ---- */
+        
         try {
-            bookingDao.create(b);                         // genera l’ID
+            bookingDao.create(b);                         
             ApplicationFacade.sendBookingReceivedEmail(b);
             return "success";
 

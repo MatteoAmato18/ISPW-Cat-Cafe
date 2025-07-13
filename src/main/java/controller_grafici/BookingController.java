@@ -35,7 +35,7 @@ public class BookingController {
         view.getCancelButton() .setOnAction(_ -> nav.navigateToHomePage(nav, typeOfLogin));
     }
 
-    /* --------------- CONFERMA PRENOTAZIONE -------------------- */
+    
     private void handleConfirm() {
 
         BookingBean bean = ModelBeanFactory.getBookingBean(view);
@@ -56,7 +56,7 @@ public class BookingController {
         	}
         if (!ok) return;
 
-        /* attività scelta  */
+        
         String sel = view.getSelectedActivityName();
         bean.setFreeActivities(sel == null ? List.of() : List.of(sel));
 

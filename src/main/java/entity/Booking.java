@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Booking {
 
-    /* ---------------- campi ---------------- */
+   
     private int             id;
     private String          title;
     private LocalDate       date;

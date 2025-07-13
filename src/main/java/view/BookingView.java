@@ -58,7 +58,7 @@ public class BookingView {
         Label activityTitle = new Label("Attività disponibili:");
         activitySection.getChildren().add(activityTitle);
 
-        /* ----- layout ----- */
+        
         root.getChildren().addAll(
                 title,
                 new Label("Giorno"), data,  dataErr,
@@ -134,14 +134,14 @@ public class BookingView {
     public void addActivityRadios(List<String> activityNames) {
         for (String name : activityNames) {
             RadioButton rb = new RadioButton(name);
-            rb.setToggleGroup(activityGroup);     // mutual-exclusive
+            rb.setToggleGroup(activityGroup);     
             activitySection.getChildren().add(rb);
         }
     }
 
   
     private void populateTimeBox() {
-        var times = IntStream.rangeClosed(32,95)   // 08:00 → 23:45
+        var times = IntStream.rangeClosed(32,95)   
                 .mapToObj(i -> LocalTime.of(i/4,(i%4)*15))
                 .toList();
         ora.setItems(FXCollections.observableArrayList(times));

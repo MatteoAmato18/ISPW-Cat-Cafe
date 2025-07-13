@@ -113,7 +113,7 @@ public class BookingViewAlternative {
     public String getNomePrenotazione(){ return nomePrenotazione.getText().trim(); }
     public String getConfirmationEmail(){ return email.getText().trim(); }
 
-    /* ----- error helper ----- */
+    
     public void hideAllErrors(){
     	dataErr.setVisible(false); oraErr.setVisible(false);
         seatsErr.setVisible(false); nameErr.setVisible(false); mailErr.setVisible(false);
