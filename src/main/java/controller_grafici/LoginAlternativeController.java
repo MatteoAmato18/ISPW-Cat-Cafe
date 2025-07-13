@@ -73,7 +73,7 @@ public class LoginAlternativeController {
         }
         if (!ok) return;
 
-        /* -------- BUSINESS -------- */
+        
         try {
             logger.log(Level.INFO, "Tentativo di login per utente: {0}", bean.getUserType());
 
