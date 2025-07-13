@@ -65,7 +65,7 @@ public class LoginAlternativeController {
             loginView.showPasswordError();
             ok = false;
         }
-        if (!bean.hasUserType()) {                   // dovrebbe raramente accadere
+        if (!bean.hasUserType()) {                  
             loginView.getErrorMessage().setText("Seleziona un tipo di accesso.");
             loginView.getErrorMessage().setVisible(true);
             loginView.getErrorMessage().setManaged(true);
